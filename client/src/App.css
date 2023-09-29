@@ -1,0 +1,608 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.on {
+  color: #000;
+}
+
+.off {
+  color: #ccc;
+}
+
+
+/*Log in/Register*/
+.row {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  width: 1200px;
+  margin-top: 25px;
+  border-radius: 10px;
+  background-color: #66778E;
+  padding: 60px;
+}
+
+.login {
+  width: 500px;
+  padding: 10px 20px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+}
+
+.login label {
+  font-weight: bold;
+}
+
+.imagen_login {
+  width: 500px;
+}
+
+.front_login {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+  border-radius: 20px;
+  background-color: #f7f2ec;
+  border: 1px solid rgb(204, 203, 202);
+  width: 1100px;
+  margin-top: 50px;
+  font-family: 'Antic Slab', serif;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  gap: 5px;
+}
+
+.login h3 {
+  color: #6d5139;
+  font-size: 13px;
+}
+
+.login h2 {
+  color: #7D6C5E;
+  font-size: 30px;
+}
+
+.login h3:hover {
+  border-bottom: 1px solid #6d5139;
+  cursor: pointer;
+}
+
+.background_login {
+  padding: 10px;
+  background-color: #a08c7b;
+  background-size: cover;
+  width: 100%;
+  height: 750px;
+}
+
+.button {
+  background-color: #6d5139;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/*Register*/
+.register_login {
+  padding: 10px;
+  background-color: #a08c7b;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+  border-radius: 20px;
+  width: 400px;
+  width: 700px;
+  margin-top: 10px;
+  font-family: 'Antic Slab', serif;
+  padding: 40px;
+  background-color: #f7f2ec;
+}
+
+.register h3:hover {
+  border-bottom: 1px solid #6d5139;
+  cursor: pointer;
+}
+
+.register h3 {
+  color: #6d5139;
+  font-size: 13px;
+  width: 120px;
+  margin: 0 auto;
+
+}
+
+.register h2 {
+  color: #6d5139;
+  font-size: 30px;
+}
+
+.form_register {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  padding: 50px;
+  border-radius: 20px;
+}
+
+input::placeholder {
+  font: 0.75rem/3 serif;
+}
+
+.error {
+  font-size: 12px;
+  color: rgb(134, 52, 52);
+}
+
+/*New Book*/
+.newbook {
+  background-image: url(https://images.unsplash.com/photo-1513185041617-8ab03f83d6c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 92px;
+  font-family: 'Antic Slab', serif;
+  background-position: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+}
+
+.newbook_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+  border-radius: 20px;
+  width: 900px;
+  padding: 40px;
+  background-color: #f7f2ecc4;
+  gap: 20px;
+}
+
+.newbook_rating {
+  margin-right: 20px;
+}
+
+.newbook textarea {
+  font: 0.75rem/3 serif;
+}
+
+.button_new {
+  display: flex;
+  gap: 20px;
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+/*Dashboard*/
+.trash {
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.trash:hover{
+  transform: scale(1.3); 
+}
+
+.book_cover:hover{
+  transform: scale(1.3); 
+}
+
+.images {
+  height: 230px;
+  margin-top: 30px;
+  width: 160px;
+}
+
+.book {
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-top: 10px;
+}
+
+.book_bottom {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: center;
+  padding: 20px;
+  color: #ffffff;
+}
+
+.background {
+  background-image: url(https://img.freepik.com/free-photo/books-shelf_53876-138567.jpg?w=900&t=st=1695432688~exp=1695433288~hmac=a2f4117ea98e25017d3cd7d24e1400c3b80dacc387c71317dfe5e063097277c3);
+  margin-top: 60px;
+  font-family: 'Antic Slab', serif;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.dashboard {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.books_right {
+  width: 900px;
+  height: max-content;
+  flex: 1 1;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 0.815);
+  margin-right: 20px;
+  padding: 20px;
+  padding-left: 70px;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  justify-content: flex-start;
+}
+
+.books_left {
+  width: 900px;
+  height: 640px;
+  flex: 1 1;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.815);
+  border-radius: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-top: 25px;
+  flex-direction: column;
+}
+
+.book_single {
+  display: flex;
+  flex-direction: column;
+  margin-right: 45px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.logo {
+  width: 28px;
+  margin-right: 10px;
+}
+
+.nav_top {
+  position: fixed;
+  margin-bottom: 20px;
+  overflow: hidden;
+  width: 100%;
+  top: 0;
+  height: 60px;
+}
+
+.nav_top a:hover {
+  border-bottom: 2px solid #6d5139;
+  cursor: pointer;
+}
+
+.button_nav {
+  font-weight: 10px;
+  background-color: #6d5139;
+  color: white;
+  padding: 6px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.navlinks {
+  display: flex;
+  justify-content: center;
+}
+
+.book_result{
+  display: flex;
+  flex-direction: row;
+}
+
+/*Book Info*/
+
+.bookinfo {
+  display: flex;
+  flex-direction: column;
+  background-image: url(https://img.freepik.com/free-photo/book-library-with-open-textbook_1150-5924.jpg?w=996&t=st=1695589761~exp=1695590361~hmac=49eda692230d8d311ee44cbf459da41560df774385bebd6a46b30f3f6545132b);
+  background-position: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 1000px;
+  height: 630px;
+  background-color: rgba(255, 255, 255, 0.815);
+  margin: 0 auto;
+  border-radius: 20px;
+  margin-top: 40px;
+  font-family: 'Antic Slab', serif;
+  gap: 50px;
+  padding: 80px;
+}
+
+.book_left {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  font-family: 'Antic Slab', serif;
+  margin-left: 20px;
+  margin-left: 55px;
+  align-items: center;
+}
+
+.book_left img {
+  width: 260px;
+}
+
+.book_right {
+  display: flex;
+  flex-direction: column;
+  width: 455px;
+  margin-top: 25px;
+  align-items: flex-start;
+}
+
+.lh-base {
+  text-align: justify;
+}
+
+.book_right h2 {
+  font-size: 25px;
+  margin-bottom: 25px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.bottom_btn {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.button_info {
+  background-color: #926f51;
+  border-radius: 5px;
+  padding: 8px;
+  color: white;
+  font-size: 15px;
+}
+
+.description {
+  text-align: justify;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.rating_info {
+  display: flex;
+  flex-direction: row;
+}
+
+.book_details{
+  display: flex;
+  flex-direction: row;
+}
+
+/*Edit*/
+.edit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+  border-radius: 20px;
+  width: 900px;
+  padding: 35px;
+  background-color: #f7f2ecc4;
+  gap: 25px;
+  font-weight: bold;
+  margin-top: 100px;
+  font-family: 'Antic Slab', serif;
+}
+
+.edit_book1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.left,
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-right: 40px;
+  flex: 1;
+}
+
+.edit ::placeholder {
+  font: 0.75rem/3 serif;
+}
+
+.edit h3 {
+  font-weight: bold;
+}
+
+.edit_book {
+  background-image: url(https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.star {
+  margin-left: 3px;
+}
+
+/*Card*/
+.card1 {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-left: 25px;
+}
+
+.card img {
+  height: auto;
+  width: 150px;
+  margin-top: 30px;
+  max-width: 100%;
+}
+
+.left_search {
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.top_search {
+  margin-bottom: 30px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+  font-weight: bold;
+  align-items: center;
+}
+
+.top_search input {
+  float: right;
+  padding: 6px;
+  border: 1px solid black;
+  border-radius: 15px;
+  margin-right: 16px;
+  font-size: 17px;
+  background-color: #e4e2e281;
+}
+
+.top_search label {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.book_buttons {
+  font-size: 10px;
+  margin-top: 10px;
+}
+
+.book_buttons img {
+  width: 17px;
+  margin-left: 10px;
+  content: '';
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.heart:hover {
+  transform: scale(1.3);
+}
