@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import "../components/NewBook.css";
 
 const NewBook = () => {
     const [title, setTitle] = useState("");
@@ -46,34 +47,34 @@ const NewBook = () => {
                         <div>
                             <label>Title:</label>
                             <input type="text" name="title" value={title} className="form-control" onChange={e => setTitle(e.target.value)} placeholder="Insert the title" />
-                            {errors.title ? <p className="error">{errors.title.message}</p> : null}
+                            {errors.title ? <p className="error_new">{errors.title.message}</p> : null}
                         </div>
                         <div>
                             <label>Cover:</label>
                             <input type="text" name="cover" value={cover} className="form-control" onChange={e => setCover(e.target.value)} placeholder="Paste the link of your cover" />
-                            {errors.cover ? <p className="error">{errors.cover.message}</p> : null}
+                            {errors.cover ? <p className="error_new">{errors.cover.message}</p> : null}
                         </div>
                         <div>
                             <label>Description:</label>
                             <textarea type="text" rows="3" cols="30" name="description" value={description} className="form-control" onChange={e => setDescription(e.target.value)} placeholder="Add a description" />
-                            {errors.description ? <p className="error">{errors.description.message}</p> : null}
+                            {errors.description ? <p className="error_new">{errors.description.message}</p> : null}
                         </div>
                     </div>
                     <div className="right">
                         <div>
                             <label>Pages:</label>
                             <input type="number" name="pages" value={pages} className="form-control" onChange={e => setPages(e.target.value)} />
-                            {errors.pages ? <p className="error">{errors.pages.message}</p> : null}
+                            {errors.pages ? <p className="error_new">{errors.pages.message}</p> : null}
                         </div>
                         <div>
                             <label>Author:</label>
                             <input type="text" name="publisher" value={publisher} className="form-control" onChange={e => setPublisher(e.target.value)} placeholder="Add author's name" />
-                            {errors.publisher ? <p className="error">{errors.publisher.message}</p> : null}
+                            {errors.publisher ? <p className="error_new">{errors.publisher.message}</p> : null}
                         </div>
                         <div>
                             <label>Publication date:</label>
                             <input type="date" name="year" value={year} className="form-control" onChange={e => setYear(e.target.value)} />
-                            {errors.year ? <p className="error">{errors.year.message}</p> : null}
+                            {errors.year ? <p className="error_new">{errors.year.message}</p> : null}
                         </div>
                         <div>
                             <label className="newbook_rating">Rate your book</label>
@@ -94,7 +95,7 @@ const NewBook = () => {
                                     </button>
                                 );
                             })}
-                            {errors.rating ? <p className="error">{errors.rating.message}</p> : null}
+                            {errors.rating ? <p className="error_new">{errors.rating.message}</p> : null}
                         </div>
                     </div>
                 </div>

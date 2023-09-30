@@ -16,7 +16,7 @@ const saveBook = (req, res) => {
 
 const findBooks = (req, res) => {
     usertoken_decoded = jwt.verify(req.cookies.usertoken, secret_key);
-    Books.find({creator: usertoken_decoded._id}).collation({locate: "en"}).sort({ title: 1 })
+    Books.find({creator: usertoken_decoded._id}).sort({ title: 1 })
         .then(books => res.json(books))
         .catch(err => {
             res.status(400).json(err);

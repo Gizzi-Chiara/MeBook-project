@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import "../components/BookInfo.css";
 
 
 const BookInfo = () => {
@@ -9,6 +10,7 @@ const BookInfo = () => {
     const { id } = useParams();
     const [list, setList] = useState([]);
     const navigate = useNavigate();
+    const date = new Date
 
     useEffect(() => {
         axios.get("http://localhost:8000/api/books/" + id, { withCredentials: true })
@@ -45,7 +47,7 @@ const BookInfo = () => {
                 </div>
                 <div className="book_right">
                     <h2>{book.title}</h2>
-                    <p className="description">Book Desciption:</p>
+                    <p className="description">Book Description:</p>
                     <p className="lh-base">{book.description}</p>
                     <div className="book_details">
                         <p className="description">Page number:</p>
@@ -61,14 +63,19 @@ const BookInfo = () => {
                     </div>
                     <div className="rating_info">
                         <span className="description">Rating: </span>
-                        {book.rating}<span className="star">&#9733;</span>
-                        {/* {
-                            if(book.rating === 1){
-                                <span className="star">&#9733;</span>
-                            } else if (book.rating === 2) {
-                                <span className="star">&#9733; &#9733;</span>
-                            } if {}
-                        } */}
+                        {
+                            book.rating === 1 ?
+                            <span className="star">&#9733;</span>
+                            : book.rating === 2 ?
+                            <span className="star">&#9733;&#9733;</span>
+                            : book.rating === 3 ?
+                            <span className="star">&#9733;&#9733;&#9733;</span>
+                            : book.rating === 4 ?
+                            <span className="star">&#9733;&#9733;&#9733;&#9733;</span>
+                            : book.rating === 5 ?
+                            <span className="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                            : 0
+                        }
                     </div>
                     <div className="bottom_btn">
                         <button onClick={goBack} className="button_info">Home</button>

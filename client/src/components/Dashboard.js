@@ -3,11 +3,12 @@ import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import LogOutButton from "./LogOutButton";
-import '../App.css';
+import '../components/Dashboard.css';
 import Trash from "./trash.png";
 import Eye from "./eye-alt.svg";
 import Logo from "./booklogo.png";
 import BookCard from "./BookCard";
+import "../App.css";
 
 const Dashboard = () => {
     const [booksList, setBooksList] = useState(0);
@@ -28,7 +29,7 @@ const Dashboard = () => {
 
     const searchBook = (e) => {
         if (e.key === "Enter") {
-            axios.get("https://www.googleapis.com/books/v1/volumes?q=" + search + "&key=AIzaSyCrqkBRFhEzdgj7oaGOXE83K0jyCZP3cuI" + "&maxResults=6")
+            axios.get("https://www.googleapis.com/books/v1/volumes?q=" + search + "&key=AIzaSyCrqkBRFhEzdgj7oaGOXE83K0jyCZP3cuI" + "&maxResults=21")
                 .then(res => setBookData(res.data.items))
                 .catch(err => console.log(err))
         }
@@ -77,7 +78,7 @@ const Dashboard = () => {
                 <div className="dashboard">
                     <div className="books_left">
                         <div className="top_search">
-                            <label>Search new books</label>
+                            <label>Get inspired!</label>
                             <input type="text" value={search} name="search" placeholder="Search new inspirations" onChange={e => setSearch(e.target.value)} onKeyDown={searchBook} />
                         </div>
                         <div className="left_search">

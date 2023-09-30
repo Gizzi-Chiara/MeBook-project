@@ -5,10 +5,10 @@ import { Navigate } from 'react-router-dom';
 import NewBook from "./components/NewBook";
 import Dashboard from './components/Dashboard';
 import BookInfo from './components/BookInfo';
-import EditProfile from './components/EditProfile';
 import LogIn from './components/LogIn';
 import EditBook from './components/EditBook';
 import Credits from './components/Credits';
+import MyProfile from './components/MyProfile';
 
 const App = () => {
   return(
@@ -20,7 +20,7 @@ const App = () => {
         <Route path='books/newbook' element={<NewBook/>}/>
         <Route path='/books' element={<Dashboard/>} />
         <Route path='/books/:id' element={<BookInfo/>}/>
-        <Route path='/books/profile' element={<EditProfile/>}/>
+        <Route path='/books/profile' element={<MyProfile/>}/>
         <Route path='/books/edit/:id' element={<EditBook/>}/>
         <Route path='/books/credits' element={<Credits/>}/>
       </Routes>

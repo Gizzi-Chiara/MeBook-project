@@ -30,6 +30,9 @@ const registerSchema = new mongoose.Schema(
             required: [true, "Your birthday is mandatory"],
             min: '1900-01-01',
             max: '2023-01-01'
+        },
+        creator: {
+            type: String
         }
     }, { timestamps: true, versionKey: false }
 )

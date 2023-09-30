@@ -1,0 +1,225 @@
+/*tel*/
+@media (width <=481px) {
+    .register {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        align-items: center;
+        padding: 20%;
+        border-radius: 20px;
+        width: 60vw;
+        width: 40vh;
+        margin-top: 30%;
+        font-family: 'Antic Slab', serif;
+        padding: 10px;
+        background-color: #f7f2ec;
+    }
+
+    .register h3 {
+        color: #6d5139;
+        font-size: 13px;
+        width: 120px;
+        margin: 0 auto;
+    }
+
+    .error_register {
+        font-size: 12px;
+        color: rgb(134, 52, 52);
+    }
+
+    .register_login {
+        padding: 10px;
+        background-color: #a08c7b;
+        background-size: cover;
+        background-repeat: repeat;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .button_reg {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background-color: #6d5139;
+        color: white;
+        padding: 8px;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+    input::placeholder {
+        font: 0.65rem/3 serif;
+    }
+
+    .register h3:hover {
+        border-bottom: 1px solid #6d5139;
+        cursor: pointer;
+    }
+
+    .form_register {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        padding: 20px;
+        border-radius: 10px;
+        font-size: 12px;
+    }
+
+    .register h2 {
+        color: #6d5139;
+        font-size: 18px;
+        font-weight: bold;
+    }
+}
+
+/*ipad*/
+@media (482px <=width <=1023px) {
+    .register {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        align-items: center;
+        border-radius: 20px;
+        width: 90vw;
+        margin-top: 15px;
+        height: 80vh;
+        font-family: 'Antic Slab', serif;
+        background-color: #f7f2ec;
+    }
+
+    .register h3 {
+        color: #6d5139;
+        font-size: 12px;
+        width: 120px;
+        margin: 0 auto;
+    }
+
+    .error_register {
+        font-size: 12px;
+        color: rgb(134, 52, 52);
+    }
+
+    .register_login {
+        padding: 15px;
+        background-color: #a08c7b;
+        background-size: cover;
+        width: 100vw;
+        height: 100vh;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .button_reg {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background-color: #6d5139;
+        color: white;
+        padding: 8px;
+        border-radius: 5px;
+        margin-top: 15px;
+    }
+
+    input::placeholder {
+        font: 0.65rem/3 serif;
+    }
+
+    .register h3:hover {
+        border-bottom: 1px solid #6d5139;
+        cursor: pointer;
+    }
+
+    .form_register {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        border-radius: 10px;
+        font-size: 18px;
+    }
+
+    .register h2 {
+        color: #6d5139;
+        font-size: 30px;
+        font-weight: bold;
+    }
+}
+
+/*compu*/
+@media (1023px <=width) {
+    .register_login {
+        padding: 10px;
+        background-color: #a08c7b;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        background-repeat: repeat;
+        background-size: cover;
+    }
+
+    .register {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        align-items: center;
+        border-radius: 20px;
+        width: 55%;
+        height: 100vh;
+        margin-top: 10px;
+        font-family: 'Antic Slab', serif;
+        padding: 50px;
+        background-color: #f7f2ec;
+    }
+
+    .register h3:hover {
+        border-bottom: 1px solid #6d5139;
+        cursor: pointer;
+    }
+
+    .register h3 {
+        color: #6d5139;
+        font-size: 13px;
+        width: 120px;
+        margin: 0 auto;
+    }
+
+    .register h2 {
+        color: #6d5139;
+        font-size: 30px;
+    }
+
+    .form_register {
+        display: flex;
+        gap: 15px;
+        flex-direction: column;
+        padding: 50px;
+        border-radius: 20px;
+    }
+
+    input::placeholder {
+        font: 0.75rem/3 serif;
+    }
+
+    .error_register {
+        font-size: 12px;
+        color: rgb(134, 52, 52);
+    }
+
+    .button_reg {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background-color: #6d5139;
+        color: white;
+        padding: 8px;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+}

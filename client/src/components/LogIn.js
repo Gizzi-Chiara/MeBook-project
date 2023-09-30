@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import LoginImage from "./login1.jpg";
+import "../components/LogIn.css";
 
 const LogIn = () => {
     const [emailLogin, setEmailLogin] = useState("");

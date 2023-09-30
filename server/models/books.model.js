@@ -36,6 +36,9 @@ const booksSchema = new mongoose.Schema(
             required: [true, "The rating is mandatory and must be a number between 1 and 5"],
             mix: 1,
             max: 5,
+        },
+        creator: {
+            type: String
         }
     }, { timestamps: true, versionKey: false }
 )

@@ -1,37 +1,54 @@
 import React, { useState } from "react";
+import axios from "axios";
 import Heart from "./heart.svg";
+import "../components/BookCard.css";
 
 const BookCard = ({ book }) => {
-    const [fav, setFav] = useState([]);
+    const [title, setTitle] = useState("");
+    const [cover, setCover] = useState("");
+    const [description, setDescription] = useState("");
+    const [pages, setPages] = useState();
+    const [publisher, setPublisher] = useState("");
+    const [year, setYear] = useState("");
+    const [rating, setRating] = useState(0);
 
-    const addToFav = (e) => {
-        console.log(e + " added to fav");
-        setFav(e);
-        console.log(fav);
-    }
+    /* const addToFav = (e) => {
+        setTitle("book.volumeInfo.title");
+        setCover("book.imageLinks.smallThumbnail");
+        setDescription("Add your description");
+        setPages("book.volumeInfo.pageCount");
+        setPublisher("book.volumeInfo.authors[0]");
+        setYear("book.volumeInfo.publishedDate");
+        setRating("Math.floor(book.volumeInfo.averageRating");
+
+        axios.post("http://localhost:8000/api/books/save", {
+            title,
+            cover,
+            description: "Add your description",
+            pages,
+            publisher,
+            year,
+            rating
+        }, { withCredentials: true })
+            .then(res => console.log(book))
+            .catch(err => {
+                console.log(err)
+            });
+    } */
 
     return (
-        <div>
+        <div className="fila">
             {
-                book.map((item, index) => {
-                    let thumbnail = item.volumeInfo.imageLinks && item.volumeInfo.imageLinks.smallThumbnail
-                    if (thumbnail != undefined) {
-                        return (
-                            <div className="cards_row">
-                                <div className="card_back">
-                                    <div className="card1" key={index}>
-                                        <img src={thumbnail} alt="book cover" />
-                                        <label className="title">{item.volumeInfo.title}</label>
-                                        <div className="book_buttons">
-                                            <label>Add to favorites</label>
-                                            <img src={Heart} alt="like button" className="heart" onClick={e => addToFav(item.volumeInfo.title)} />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        )
-                    }
-                })
+                book.map((item, index) => (
+                    <div key={index} className="BookCard">
+                        <img src={item.volumeInfo.imageLinks.smallThumbnail} alt="book cover" className="cover_fila" />
+                        <label className="title">{item.volumeInfo.title}</label>
+                        <div className="book_buttons">
+                            <label>Add to my books</label>
+                            <img src={Heart} alt="like button" className="heart" />
+                        </div>
+                    </div>
+                ))
             }
         </div>
     )

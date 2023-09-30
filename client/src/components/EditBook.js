@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
+import "../components/EditBook.css";
 
 const EditBook = () => {
     const [book, setBook] = useState([]);
@@ -20,7 +21,13 @@ const EditBook = () => {
     useEffect(() => {
         axios.get("http://localhost:8000/api/books/" + id, { withCredentials: true })
             .then(res => {
-                setBook(res.data)
+                setTitle(res.data.title)
+                setCover(res.data.cover)
+                setDescription(res.data.description)
+                setPages(res.data.pages)
+                setPublisher(res.data.publisher)
+                setYear(res.data.year)
+                setRating(res.data.rating)
             })
             .catch(err => console.log(err));
     }, [id])
@@ -55,34 +62,34 @@ const EditBook = () => {
                             <div>
                                 <label>Title:</label>
                                 <input type="text" name="title" value={title} className="form-control" onChange={e => setTitle(e.target.value)} placeholder="Edit title" />
-                                {errors.title ? <p className="error">{errors.title.message}</p> : null}
+                                {errors.title ? <p className="error_edit">{errors.title.message}</p> : null}
                             </div>
                             <div>
                                 <label>Cover:</label>
                                 <input type="text" name="cover" value={cover} className="form-control" onChange={e => setCover(e.target.value)} placeholder="Edit cover" />
-                                {errors.cover ? <p className="error">{errors.cover.message}</p> : null}
+                                {errors.cover ? <p className="error_edit">{errors.cover.message}</p> : null}
                             </div>
                             <div>
                                 <label>Description:</label>
                                 <textarea type="text" rows="3" cols="30" name="description" value={description} className="form-control" onChange={e => setDescription(e.target.value)} placeholder="Edit description" />
-                                {errors.description ? <p className="error">{errors.description.message}</p> : null}
+                                {errors.description ? <p className="error_edit">{errors.description.message}</p> : null}
                             </div>
                         </div>
                         <div className="right">
                             <div>
                                 <label>Page Number:</label>
                                 <input type="number" name="pages" value={pages} className="form-control" onChange={e => setPages(e.target.value)} />
-                                {errors.pages ? <p className="error">{errors.pages.message}</p> : null}
+                                {errors.pages ? <p className="error_edit">{errors.pages.message}</p> : null}
                             </div>
                             <div>
                                 <label>Author:</label>
                                 <input type="text" name="publisher" value={publisher} className="form-control" onChange={e => setPublisher(e.target.value)} placeholder="Add author's name" />
-                                {errors.publisher ? <p className="error">{errors.publisher.message}</p> : null}
+                                {errors.publisher ? <p className="error_edit">{errors.publisher.message}</p> : null}
                             </div>
                             <div>
                                 <label>Publication date:</label>
                                 <input type="date" name="year" value={year} className="form-control" onChange={e => setYear(e.target.value)} />
-                                {errors.year ? <p className="error">{errors.year.message}</p> : null}
+                                {errors.year ? <p className="error_edit">{errors.year.message}</p> : null}
                             </div>
                             <div>
                                 <label className="newbook_rating">New Rating:</label>
@@ -103,7 +110,7 @@ const EditBook = () => {
                                         </button>
                                     );
                                 })}
-                                {errors.rating ? <p className="error">{errors.rating.message}</p> : null}
+                                {errors.rating ? <p className="error_edit">{errors.rating.message}</p> : null}
                             </div>
                         </div>
                     </div>
