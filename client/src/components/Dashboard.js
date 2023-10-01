@@ -25,7 +25,7 @@ const Dashboard = () => {
                     navigate("/register");
                 }
             });
-    }, [])
+    }, [list])
 
     const searchBook = (e) => {
         if (e.key === "Enter") {
@@ -59,7 +59,7 @@ const Dashboard = () => {
                                 <a class="nav-link active" aria-current="page" href="/books">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/books/profile">My Profile</a>
+                                <a class="nav-link" href="#">My Profile</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/books/newbook">Add new book</a>
@@ -90,25 +90,30 @@ const Dashboard = () => {
                         </div>
                     </div>
                     <div className="books_right">
-                        {
-                            list.map((book, index) => (
-                                <div key={index} className="book_single">
-                                    {book.cover ? <img src={book.cover} alt="book cover" className="img-fluid images"/> : <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png" alt="No book cover" className="img-fluid images"/>}
-                                    {/*<img src={book.cover} alt="book's cover" className="img-fluid images"></img>*/}
-                                    <div>
-                                        <div className="book">
-                                            <span className="span_title">{book.title}</span>
-                                            <div className="book_bottom">
-                                                <Link to={`/books/${book._id}`}>
-                                                    <img src={Eye} alt="see your book" className="book_cover"></img>
-                                                </Link>
-                                                <img src={Trash} alt="trash can" onClick={() => deleteBook(book._id)} className="trash" />
+                        <div className="mybooks">
+                            <h3>My Books</h3>
+                        </div>
+                        <div className="books_right1">
+                            {
+                                list.map((book, index) => (
+                                    <div key={index} className="book_single">
+                                        {book.cover ? <img src={book.cover} alt="book cover" className="img-fluid images" /> : <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png" alt="No book cover" className="img-fluid images" />}
+                                        {/*<img src={book.cover} alt="book's cover" className="img-fluid images"></img>*/}
+                                        <div>
+                                            <div className="book">
+                                                <span className="span_title">{book.title}</span>
+                                                <div className="book_bottom">
+                                                    <Link to={`/books/${book._id}`}>
+                                                        <img src={Eye} alt="see your book" className="book_cover"></img>
+                                                    </Link>
+                                                    <img src={Trash} alt="trash can" onClick={() => deleteBook(book._id)} className="trash" />
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            ))
-                        }
+                                ))
+                            }
+                        </div>
                     </div>
                 </div>
             </div>

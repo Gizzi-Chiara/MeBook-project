@@ -71,7 +71,7 @@ const EditBook = () => {
                             </div>
                             <div>
                                 <label>Description:</label>
-                                <textarea type="text" rows="3" cols="30" name="description" value={description} className="form-control" onChange={e => setDescription(e.target.value)} placeholder="Edit description" />
+                                <textarea type="text" rows="5" cols="30" name="description" value={description} className="form-control" onChange={e => setDescription(e.target.value)} placeholder="Edit description" />
                                 {errors.description ? <p className="error_edit">{errors.description.message}</p> : null}
                             </div>
                         </div>

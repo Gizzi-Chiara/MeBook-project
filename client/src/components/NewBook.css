@@ -21,7 +21,8 @@
     margin: 0 auto;
     align-items: center;
     border-radius: 20px;
-    width: 900px;
+    width: 75%;
+    height: 100%;
     padding: 40px;
     background-color: #f7f2ecc4;
     gap: 20px;
@@ -32,7 +33,7 @@
 }
 
 .newbook textarea {
-    font: 0.75rem/3 serif;
+    font: 0.75rem/1.5 'Antic Slab', serif;
 }
 
 .button_new {

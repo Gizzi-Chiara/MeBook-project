@@ -1,7 +1,7 @@
 .bookinfo {
     display: flex;
     flex-direction: column;
-    background-image: url(https://img.freepik.com/free-photo/book-library-with-open-textbook_1150-5924.jpg?w=996&t=st=1695589761~exp=1695590361~hmac=49eda692230d8d311ee44cbf459da41560df774385bebd6a46b30f3f6545132b);
+    background-image: url("../components/infobook.jpg");
     background-position: center;
     overflow: hidden;
     width: 100%;
@@ -14,8 +14,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 1000px;
-    height: 630px;
+    width: 75%;
+    height: 90%;
     background-color: rgba(255, 255, 255, 0.815);
     margin: 0 auto;
     border-radius: 20px;
