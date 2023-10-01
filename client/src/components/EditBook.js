@@ -116,7 +116,7 @@ const EditBook = () => {
                     </div>
                     <div className="button_new">
                         <input type="submit" value="Save Changes" className="button_info" />
-                        <button onClick={() => cancel(book._id)} className="button_info">Return to book's details</button>
+                        {/*<button onClick={() => cancel(book._id)} className="button_info">Return to book's details</button>*/}
                     </div>
                 </form >
             </div>

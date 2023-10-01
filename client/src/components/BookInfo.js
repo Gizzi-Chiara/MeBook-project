@@ -63,19 +63,23 @@ const BookInfo = () => {
                     </div>
                     <div className="rating_info">
                         <span className="description">Rating: </span>
+                        {/* {book.rating}<span className="star">&#9733;</span> */}
                         {
                             book.rating === 1 ?
-                            <span className="star">&#9733;</span>
-                            : book.rating === 2 ?
-                            <span className="star">&#9733;&#9733;</span>
-                            : book.rating === 3 ?
-                            <span className="star">&#9733;&#9733;&#9733;</span>
-                            : book.rating === 4 ?
-                            <span className="star">&#9733;&#9733;&#9733;&#9733;</span>
-                            : book.rating === 5 ?
-                            <span className="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                            : 0
+                                <span className="star">&#9733;</span>
+                                : book.rating === 2 ?
+                                    <span className="star">&#9733;&#9733;</span>
+                                    : book.rating === 3 ?
+                                        <span className="star">&#9733;&#9733;&#9733;</span>
+                                        : book.rating === 4 ?
+                                            <span className="star">&#9733;&#9733;&#9733;&#9733;</span>
+                                            : book.rating === 5 ?
+                                                <span className="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                                : 0
                         }
+
+                        {/* <span className="star">{bookRating()}</span> */}
+
                     </div>
                     <div className="bottom_btn">
                         <button onClick={goBack} className="button_info">Home</button>

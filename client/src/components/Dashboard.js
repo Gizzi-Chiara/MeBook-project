@@ -93,10 +93,11 @@ const Dashboard = () => {
                         {
                             list.map((book, index) => (
                                 <div key={index} className="book_single">
-                                    <img src={book.cover} alt="book's cover" className="img-fluid images"></img>
+                                    {book.cover ? <img src={book.cover} alt="book cover" className="img-fluid images"/> : <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png" alt="No book cover" className="img-fluid images"/>}
+                                    {/*<img src={book.cover} alt="book's cover" className="img-fluid images"></img>*/}
                                     <div>
                                         <div className="book">
-                                            <span>{book.title}</span>
+                                            <span className="span_title">{book.title}</span>
                                             <div className="book_bottom">
                                                 <Link to={`/books/${book._id}`}>
                                                     <img src={Eye} alt="see your book" className="book_cover"></img>

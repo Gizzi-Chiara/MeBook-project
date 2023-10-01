@@ -1,26 +1,26 @@
 @media (width <=481px) {
     .trash {
-        width: 15px;
-        height: 15px;
+        width: 25px;
+        height: 20px;
         cursor: pointer;
     }
-    
+
     .trash:hover {
         transform: scale(1.3);
     }
-    
+
     .book_cover:hover {
         transform: scale(1.3);
     }
-    
+
     .images {
-        width: 90px;
-        height: 100px;
-        margin-top: 15px;
+        height: 162px;
+        margin-top: 30px;
+        width: 120px;
     }
-    
+
     .book {
-        width: 40px;
+        width: 85px;
         display: flex;
         flex-direction: column;
         gap: 3px;
@@ -30,12 +30,12 @@
     .book_bottom {
         display: flex;
         flex-direction: row;
-        gap: 25px;
+        gap: 50px;
         justify-content: center;
         align-items: center;
         margin-top: 10px;
     }
-    
+
     .nav {
         display: flex;
         align-items: center;
@@ -44,84 +44,86 @@
         padding: 20px;
         color: #ffffff;
     }
-    
+
     .background {
         background-image: url(https://img.freepik.com/free-photo/books-shelf_53876-138567.jpg?w=900&t=st=1695432688~exp=1695433288~hmac=a2f4117ea98e25017d3cd7d24e1400c3b80dacc387c71317dfe5e063097277c3);
         margin-top: 60px;
         font-family: 'Antic Slab', serif;
         background-position: center;
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
         background-size: cover;
         overflow: hidden;
     }
-    
+
     .dashboard {
         display: flex;
-        flex-direction: column;
         margin: 0 auto;
         justify-content: center;
-        gap: 5px;
+        gap: 20px;
         margin-top: 10px;
-        height: 100vh;
+        height: 91vh;
+        flex-direction: column;
     }
-    
+
     .books_right {
-        width: 90%;
-        height: 95%;
+        width: 95%;
+        height: 50%;
         flex: 1;
         display: flex;
-        text-wrap: wrap;
+        flex-wrap: wrap;
         background-color: rgba(255, 255, 255, 0.815);
-        margin: 0 auto;
+        margin-right: 15px;
+        padding-left: 25px;
         border-radius: 20px;
         font-weight: bold;
         margin-top: 15px;
-        margin-bottom: 10px;
-        justify-content: flex-start;
+        margin-bottom: 25px;
+        gap: 5px;
+        justify-content: center;
         overflow: scroll;
-        justify-content: space-around;
-        gap: 15px;
+        overflow-x: clip;
+        margin: 0 auto;
     }
-    
+
     .books_left {
-        width: 90%;
-        height: 95%;
-        flex: 1;
+        width: 95%;
+        height: 50%;
+        flex: 1 1;
         display: flex;
         background-color: rgba(255, 255, 255, 0.815);
         border-radius: 20px;
         font-weight: bold;
-        margin-bottom: 25px;
         margin-left: 20px;
         margin-top: 15px;
         flex-direction: column;
         overflow: scroll;
         overflow-x: clip;
+        padding: 40px;
     }
-    
+
     .books_left::-webkit-scrollbar {
         height: 200px;
         width: 5px;
     }
-    
+
     .books_right::-webkit-scrollbar {
         height: 200px;
     }
-    
+
     .book_single {
         display: flex;
         flex-direction: column;
-        margin-bottom: 10px;
+        margin-right: 40px;
+        margin-bottom: 20px;
         align-items: center;
-        margin-left: 20px;
     }
-    
+
     .logo {
         width: 28px;
         margin-right: 10px;
     }
-    
+
     .nav_top {
         position: fixed;
         margin-bottom: 20px;
@@ -130,12 +132,12 @@
         top: 0;
         height: 60px;
     }
-    
+
     .nav_top a:hover {
         border-bottom: 2px solid #6d5139;
         cursor: pointer;
     }
-    
+
     .button_nav {
         font-weight: 10px;
         background-color: #6d5139;
@@ -144,17 +146,17 @@
         border-radius: 5px;
         cursor: pointer;
     }
-    
+
     .navlinks {
         display: flex;
         justify-content: center;
     }
-    
+
     .book_result {
         display: flex;
         flex-direction: row;
     }
-    
+
     .card1 {
         display: flex;
         flex-direction: column;
@@ -164,20 +166,20 @@
         margin-bottom: 20px;
         margin-left: 25px;
     }
-    
+
     .card img {
         height: auto;
         width: 150px;
         margin-top: 30px;
         max-width: 100%;
     }
-    
+
     .left_search {
         display: flex;
         flex-direction: row;
-    
+
     }
-    
+
     .top_search {
         margin-bottom: 20px;
         display: flex;
@@ -187,22 +189,22 @@
         font-weight: bold;
         align-items: center;
     }
-    
+
     .top_search input {
         float: right;
         padding: 6px;
         border: 1px solid black;
         border-radius: 15px;
         margin-right: 16px;
-        font-size: 10px;
+        font-size: 17px;
         background-color: #e4e2e281;
     }
-    
+
     .top_search label {
-        font-size: 15px;
+        font-size: 20px;
         margin-right: 10px;
     }
-    
+
     .book_buttons img {
         width: 17px;
         margin-left: 10px;
@@ -215,7 +217,220 @@
 }
 
 @media (482px <=width <=1023px) {
+    .trash {
+        width: 25px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    .trash:hover {
+        transform: scale(1.3);
+    }
+
+    .book_cover:hover {
+        transform: scale(1.3);
+    }
+
+    .images {
+        height: 230px;
+        margin-top: 30px;
+        width: 160px;
+    }
+
+    .book {
+        width: 180px;
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        margin-top: 10px;
+    }
     
+    .book_bottom {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .nav {
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        justify-content: center;
+        padding: 20px;
+        color: #ffffff;
+    }
+
+    .background {
+        background-image: url(https://img.freepik.com/free-photo/books-shelf_53876-138567.jpg?w=900&t=st=1695432688~exp=1695433288~hmac=a2f4117ea98e25017d3cd7d24e1400c3b80dacc387c71317dfe5e063097277c3);
+        margin-top: 60px;
+        font-family: 'Antic Slab', serif;
+        background-position: center;
+        width: 100vw;
+        height: 100vh;
+        background-size: cover;
+        overflow: hidden;
+    }
+
+    .dashboard {
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 10px;
+        height: 91vh;
+        flex-direction: column;
+    }
+
+    .books_right {
+        width: 95%;
+        height: 50%;
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: rgba(255, 255, 255, 0.815);
+        margin-right: 15px;
+        padding-left: 25px;
+        border-radius: 20px;
+        font-weight: bold;
+        margin-top: 15px;
+        margin-bottom: 25px;
+        gap: 5px;
+        justify-content: center;
+        overflow: scroll;
+        overflow-x: clip;
+        margin: 0 auto;
+    }
+
+    .books_left {
+        width: 95%;
+        height: 50%;
+        flex: 1 1;
+        display: flex;
+        background-color: rgba(255, 255, 255, 0.815);
+        border-radius: 20px;
+        font-weight: bold;
+        margin-left: 20px;
+        margin-top: 15px;
+        flex-direction: column;
+        overflow: scroll;
+        overflow-x: clip;
+    }
+
+    .books_left::-webkit-scrollbar {
+        height: 200px;
+        width: 5px;
+    }
+
+    .books_right::-webkit-scrollbar {
+        height: 200px;
+    }
+
+    .book_single {
+        display: flex;
+        flex-direction: column;
+        margin-right: 40px;
+        margin-bottom: 20px;
+        align-items: center;
+    }
+
+    .logo {
+        width: 28px;
+        margin-right: 10px;
+    }
+
+    .nav_top {
+        position: fixed;
+        margin-bottom: 20px;
+        overflow: hidden;
+        width: 100%;
+        top: 0;
+        height: 60px;
+    }
+
+    .nav_top a:hover {
+        border-bottom: 2px solid #6d5139;
+        cursor: pointer;
+    }
+
+    .button_nav {
+        font-weight: 10px;
+        background-color: #6d5139;
+        color: white;
+        padding: 6px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .navlinks {
+        display: flex;
+        justify-content: center;
+    }
+
+    .book_result {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .card1 {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        margin-left: 25px;
+    }
+
+    .card img {
+        height: auto;
+        width: 150px;
+        margin-top: 30px;
+        max-width: 100%;
+    }
+
+    .left_search {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .top_search {
+        margin-bottom: 20px;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        margin-top: 20px;
+        font-weight: bold;
+        align-items: center;
+    }
+
+    .top_search input {
+        float: right;
+        padding: 6px;
+        border: 1px solid black;
+        border-radius: 15px;
+        margin-right: 16px;
+        font-size: 17px;
+        background-color: #e4e2e281;
+    }
+
+    .top_search label {
+        font-size: 20px;
+        margin-right: 10px;
+    }
+
+    .book_buttons img {
+        width: 17px;
+        margin-left: 10px;
+        content: '';
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%;
+    }
 }
 
 @media (1023px <=width) {
@@ -246,7 +461,7 @@
         gap: 3px;
         margin-top: 10px;
     }
-
+    
     .book_bottom {
         display: flex;
         flex-direction: row;
@@ -292,13 +507,13 @@
         display: flex;
         flex-wrap: wrap;
         background-color: rgba(255, 255, 255, 0.815);
-        margin-right: 20px;
+        margin-right: 15px;
         padding-left: 70px;
         border-radius: 20px;
         font-weight: bold;
         margin-top: 15px;
         margin-bottom: 25px;
-        gap: 15px;
+        gap: 5px;
         justify-content: flex-start;
         overflow: scroll;
         overflow-x: clip;
@@ -332,10 +547,9 @@
     .book_single {
         display: flex;
         flex-direction: column;
-        margin-right: 45px;
+        margin-right: 40px;
         margin-bottom: 20px;
         align-items: center;
-        margin-left: 15px;
     }
 
     .logo {
