@@ -10,7 +10,7 @@ const BookInfo = () => {
     const { id } = useParams();
     const [list, setList] = useState([]);
     const navigate = useNavigate();
-    const date = new Date
+    const date = new Date(book.year);
 
     useEffect(() => {
         axios.get("http://localhost:8000/api/books/" + id, { withCredentials: true })
@@ -59,7 +59,7 @@ const BookInfo = () => {
                     </div>
                     <div className="book_details">
                         <p className="description">Publication date:</p>
-                        <p>{book.year}</p>
+                        <p>{date.toDateString()}</p>
                     </div>
                     <div className="rating_info">
                         <span className="description">Rating: </span>

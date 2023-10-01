@@ -298,6 +298,7 @@
         font-weight: bold;
         margin-top: 15px;
         margin-bottom: 25px;
+        gap: 15px;
         justify-content: flex-start;
         overflow: scroll;
         overflow-x: clip;
@@ -334,6 +335,7 @@
         margin-right: 45px;
         margin-bottom: 20px;
         align-items: center;
+        margin-left: 15px;
     }
 
     .logo {
