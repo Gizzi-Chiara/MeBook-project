@@ -28,7 +28,6 @@ const LogIn = () => {
                 }
             })
             .catch(err => console.log(err));
-
     }
 
     return (

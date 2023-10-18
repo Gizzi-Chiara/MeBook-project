@@ -59,9 +59,6 @@ const Dashboard = () => {
                                 <a class="nav-link active" aria-current="page" href="/books">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">My Profile</a>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-link" href="/books/newbook">Add new book</a>
                             </li>
                             <li class="nav-item">
